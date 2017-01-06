@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Tweets</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+    <h1> TEST</h1>
+    <ul>
+        <% @tweets.each do |tweet| %>
+            <li>
+                <%= tweet.status %> - <%=tweet.user.username%>
+            </li>
+        <% end %>
+
+<select>
+        <% @users.each do |user| %>
+            <li>
+                <option value="<%= user.username %>"> <%=user.username %> </option>
+            </li>
+        <% end %>
+
+        <p>status: </p><input type="text" name="status">
+
+    </ul>
+    </div>
+  </body>
+</html>
